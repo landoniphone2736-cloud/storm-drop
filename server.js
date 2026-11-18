@@ -15,6 +15,8 @@ const server = http.createServer((req, res) => {
   if (url === '/' || url === '/index.html') {
     res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-cache' });
     res.end(html);
+  } else if (url === '/favicon.ico') {
+    res.writeHead(204); res.end();
   } else if (url === '/health') {
     res.end('ok');
   } else {
