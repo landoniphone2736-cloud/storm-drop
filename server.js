@@ -106,7 +106,7 @@ function cleanName(n) { return String(n || '').replace(/[^\w \-.]/g, '').trim().
 // Only keep the fields the game uses, with sane ranges.
 function cleanData(d) {
   d = d && typeof d === 'object' ? d : {};
-  const out = { coins: int(d.coins, 0, 1e7), stats: {}, own: {}, cos: {}, t: int(d.t, 0, 1e15) };
+  const out = { coins: int(d.coins, 0, 1e7), elo: int(d.elo, 0, 1e7), stats: {}, own: {}, cos: {}, t: int(d.t, 0, 1e15) };
   for (const k of ['games', 'kills', 'wins']) out.stats[k] = int(d.stats && d.stats[k], 0, 1e7);
   for (const k of ['h', 'p', 'c']) {
     const a = d.own && Array.isArray(d.own[k]) ? d.own[k] : [];
