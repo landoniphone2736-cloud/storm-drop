@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "8-bit multiplayer battle royale",
   "main": "server.js",
-  "scripts": { "start": "node server.js" },
-  "engines": { "node": ">=18" },
-  "dependencies": { "ws": "^8.18.0" }
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "pg": "^8.13.0"
+  }
 }
